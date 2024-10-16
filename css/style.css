@@ -1,0 +1,2129 @@
+ /****************************************** roles ***************************************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    outline: none;
+    list-style: none;
+}
+
+body{
+    background-color: var(--background-body-color);
+}
+
+.contianer{
+    padding: 50px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+:root{
+    --font-family :'Poppins', sans-serif;
+    --background-body-color :#001b25;
+    --text-color :#fff;
+    --background-navbar-footer-color:#031116;
+    --logo-btn-color :#74ECD8;
+    --title-color :#00ffd1;
+    --list-navbar-color :#DAF1ED;
+    --list-navbar-color-hover :#065977;
+    --gray-color:#ffffff9e;
+    --card-hover-color:#267ccc;
+}
+
+/****************************************** header ******************************************/
+.header{
+    display: flex;
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    background: var(--background-navbar-footer-color);
+}
+
+.header .nav-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.header .nav-content .open_menu{
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    right: 5%;
+    color: var(--text-color);
+}
+
+.header .logo {
+    position: absolute;
+    left: 3%;
+    top: 25%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: var(--logo-btn-color);
+    cursor: default;
+    animation: logostyle 0.5s ease forwards;
+    text-transform: capitalize;
+}
+
+
+.header  ul {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    display: flex;
+    gap: 40px;
+}
+
+.header ul li {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.header  ul li a{
+    color: var(--list-navbar-color);
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.8s ease;
+    overscroll-behavior-y: smooth;
+    animation: topscroll 0.5s ease forwards ;
+    animation-delay: calc(.2s * var(--i));
+    opacity: 0;
+}
+
+.header  ul li a:hover{
+    color: var(--list-navbar-color-hover)
+}
+
+@keyframes logostyle{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes topscroll{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+100%{
+        opacity: 1;
+        transform: translateY( 0px);
+    }
+} 
+
+/***************************************** home **************************************************/
+
+.home {
+    height: 100vh;
+    background: url(../img/Page\ 2.jpeg);
+    background-size: cover;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.home .home-content{
+    position: absolute;
+    top: 25%;
+    line-height: 28px;
+    width: 600px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 20px;
+    font-weight: bold;
+    word-spacing: 5px;
+    margin-bottom: 20px;
+    animation: bottomscroll 0.5s ease forwards ;
+    opacity: 0;
+}
+
+.home .home-content .home-content-p1 span {
+    padding: 5px 10px;
+    background-color: var(--title-color);
+    border-radius: 8px;
+}
+
+.home .home-content h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+    line-height: 57px;
+    width: 400px;
+    animation: bottomh1scroll 0.5s ease forwards ;
+    opacity: 0;
+}
+
+.home .home-content h1 span {
+    color: var(--logo-btn-color);
+}
+
+.home .home-content .home-content-p2 {
+    color: #ccc;
+    font-size: 15px ;
+    animation: bottomscroll 0.5s ease forwards ;
+    opacity: 0;
+}
+
+.home-content .home-content-icons {
+    font-size: 25px;
+    margin-top:50px;
+}
+
+.home .home-content .home-content-icons a {
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: var(--text-color);
+    transition: all 0.8s ease;
+    border: 1px solid var(--logo-btn-color);
+    justify-content: center;
+    animation: topiconscroll 0.5s ease forwards ;
+    animation-delay: calc(.1s * var(--i));
+    opacity: 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 100px cyan , 0 0 200px cyan;
+    background-color: var(--logo-btn-color);
+}
+
+.home .btn-more-about-me { 
+    margin-top: 60px;
+}
+
+
+.home .btn-more-about-me a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #00ffd1;
+    padding: 15px 30px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    overscroll-behavior: smooth;
+    animation: topiconscroll 0.5s ease forwards ;
+    opacity: 0;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 100px cyan , 0 0 200px cyan;
+}
+
+
+@keyframes bottomscroll{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+   100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes topiconscroll{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+   100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes bottomh1scroll{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+   100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/************************************************ about *********************************************/
+.about{
+    margin-top: 10%;
+    width: 100%;
+}
+.section-title{
+    font-size: 25px;
+    margin: 100px auto;
+    text-align: center;
+    color: var(--logo-btn-color);
+}
+
+.section-title span{
+    color: #06412B;
+}
+
+.about-me-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 35px;
+}
+
+.about-me-content .about-img{
+    margin-left: 20%;
+}
+
+.about-me-content .about-img img{   
+    max-width: 400px;
+    height: auto;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 100px cyan ;
+}
+
+.about-me-content .about-text {
+    margin-left: 25% ;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: var(--title-color);
+}
+
+.about-me-content .about-text .about-me-p1 span{
+    color: var(--logo-btn-color);
+    font-weight: bold;
+}
+
+.about-me-content .about-text .about-me-p2{
+    color: var(--gray-color);
+    font-size: 15px;
+    line-height: 30px;
+    width: 500px;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more a{
+    text-decoration: none;
+    padding: 7px 25px;
+    border:1px solid var(--title-color);
+    color: var(--logo-btn-color);
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+.about-me-content .more a:hover{
+    background-color: var(--title-color);
+    border: none;
+    box-shadow: 0 0 25px var(--logo-btn-color) , 0 0 50px var(--logo-btn-color) , 0 0 75px var(--logo-btn-color);
+    color: var(--list-navbar-color-hover);
+}
+
+
+/************************************** services ******************************************/
+
+.contianer .services-card{
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin:  40px auto;
+    background-color: var(--background-navbar-footer-color);
+    gap: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(0, 68, 255) , 0 0 25px rgb(0, 4, 255) ;
+    transition: all 0.5s ease;
+}
+
+.contianer .services-card:hover{
+    background-color:var(--card-hover-color) ;
+    color: var(--text-color);
+    box-shadow: 0 0 5px rgb(0, 26, 255) , 0 0 25px rgb(0, 60, 255)  , 0 0 50px rgb(0, 26, 255);
+}
+
+.contianer .services-card i{
+    color: var(--text-color);
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+.contianer .services-card .services-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--title-color);
+}
+
+.contianer .services-card .services-text{
+    color: #ccc;
+    font-size: 15px;
+}
+
+/************************************** skills ******************************************/
+
+.skills{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.technical-bars .bar{
+    margin-bottom: 40px;
+}
+
+.technical-bars .bar .info{
+    color: var(--text-color);
+}
+
+.technical-bars .bar .info span{
+    font-size: 20px;
+    font-weight:bold ;
+}
+
+.technical-bars .bar .info  i{
+    font-size: 30px;
+    gap: 50px;
+}
+
+
+.technical-bars .bar .progress{
+    width: 500px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--text-color);
+    margin-top: 20px;
+    position: relative;
+}
+
+.technical-bars .bar .progress span{
+    position: absolute;
+    background-color: var(--logo-btn-color);
+    box-shadow: 0 0 25px cyan , 0 0 50px cyan , 0 0 75px cyan ,  0 0 100px cyan;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    transition: all 0.7s ease;
+}
+
+/************************************** ttfolio **************************************/
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(310px, auto));
+    gap: 45px;
+    margin-left: 10%;
+}
+
+.portfolio-content .row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.portfolio-content .row img{
+    width: 120%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.portfolio-content .row .leyar{
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.1 ) , rgb(12, 87, 94)) ;
+    position: absolute;
+    border-radius: 15px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.portfolio-content .row .leyar p.p1{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio-content .row .leyar p.p2{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.portfolio-content .row .leyar a{
+    text-decoration: none;
+}
+
+.portfolio-content .row .leyar a i{
+    color: #fff;
+    background-color: #101a18;
+    font-size: 18px;
+    padding: 3px ;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.portfolio-content .row .leyar a i:hover{
+    color: #001b25;
+    background-color: #fff;
+}
+
+.row:hover img{
+    transform: scale(1.1);
+}
+
+.row:hover .leyar{
+    height: 100%;
+}
+
+
+/******************************** contact ****************************/
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content .content-text h5 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00ffd1;
+}
+
+.content .content-text h5 span{
+    color: #06412B;
+}
+
+.content-text .text-about-me{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #00ffd075;
+}
+
+.content .text-p-about-me{
+    margin-bottom: 30px;
+    color: #cccccc63;
+    width: 500px;
+}
+
+.content .content-text ul{
+    margin-bottom: 20px;
+}
+
+.content .content-text ul li {
+    font-weight: 500;
+    color: cyan;
+    line-height: 35px;
+}
+
+.content .content-text ul li i {
+    color: #267ccc;
+    font-size: 23px;
+    font-weight: 200;
+    margin-right:20px ;
+}
+
+.content .content-text .icons a i{
+    font-size: 20px;
+    margin-right: 20px;
+    color: #00ffd1;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid #00ffd1;
+    transition: all 0.8s ease;
+}
+
+.content .content-text .icons a i:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 25px #00ffd1 , 0 0 50px #00ffd1 , 0 0 100px #00ffd1 , 0 0 150px #00ffd1;
+}
+
+.content .content-form input{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 25px;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #00ffd1;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.content .content-form textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #00ffd1;
+    padding: 10px;
+    border-radius: 15px;
+    resize: none;
+}
+
+.content .content-form .btn-send{
+    width: 80px;
+    height: 40px;
+    transition: all 0.8s ease;
+}
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 25px #00ffd1 , 0 0 50px #00ffd1 , 0 0 100px #00ffd1 , 0 0 150px #00ffd1;
+    border: none;
+}
+
+/************************************ footer *****************************/
+
+.footer{
+    padding: 40px 0;
+    background-color: var(--background-navbar-footer-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.footer h6{
+    font-size: 13px;
+}
+
+.footer h6 span{
+    font-size: 15px;
+    color: #00ffd1;
+}
+
+/************************************ media *****************************/
+
+/************************** xxL ************************/
+
+@media (max-width: 1399.98px){
+    *{
+        overflow-x:hidden ;
+    }
+
+    body i {
+        overflow-y: hidden;
+    }
+
+
+/***************** home *********************/
+
+.home {
+    overflow-y: hidden;
+}
+
+.home .home-content{
+    top: 20%;
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.home .home-content h1 {
+    font-size: 28px;
+    width: 420px;
+}
+
+.home .home-content .home-content-p2 {
+    width: 550px;
+    font-size: 13px ;
+}
+
+.home-content .home-content-icons {
+    width: 50%;
+    font-size: 22px;
+    margin-top:15px;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan;
+}
+
+.home .btn-more-about-me { 
+    width:50%;
+    margin-top: 5px;
+    padding: 20px 0;
+}
+
+.home .btn-more-about-me a{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 10px cyan;
+}
+
+/************** about *******************/
+.about{
+    margin-top: 10%;
+}
+.section-title{
+    font-size: 21px;
+    margin: 100px auto 25px auto;
+}
+
+.about-me-content .about-img{
+    text-align: center;
+    padding: 40px;
+    margin:  0 1% 0 0;
+}
+
+.about-me-content .about-img img{   
+    max-width: 400px;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 35px cyan ;
+}
+
+.about-me-content .about-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 25px;
+    padding: 0 20px ;
+    margin-bottom: 30px;
+}
+
+.about-me-content .about-text .about-me-p2{
+    font-size: 12px;
+    padding: 0 10px ;
+    width: 100%;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more{
+    padding: 20px 0;
+}
+
+.about-me-content .more a:hover{
+    box-shadow: 0 0 10px var(--logo-btn-color);
+}
+
+.content .content-form .btn-send{
+    overflow-y: hidden;
+}
+
+/******************* service ************************/
+
+.contianer .services-card i{
+    overflow-y: hidden;
+}
+
+.technical-bars .bar .info  i{
+    overflow-y: hidden;
+}
+
+/*************** skills *****************/
+.technical-bars .bar .progress{
+    width: 550px;
+}
+
+/****************** Portfolio *********************/
+
+.portfolio-content{
+    margin-left: 0%;
+}
+
+.portfolio-content .row .leyar p.p1,
+.portfolio-content .row .leyar p.p2,
+.portfolio-content .row .leyar a{
+    overflow-y: hidden; 
+}
+
+
+/************** contact *******************/
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffd1;
+    border: none;
+}
+
+
+}
+
+/************************** LG && XL ************************/
+
+@media (min-width:991.98px) and (max-width: 1199.98px){
+    *{
+        overflow-x:hidden ;
+    }
+
+    body i {
+        overflow-y: hidden;
+    }
+
+/*************** header ********************/
+
+.header .logo {
+    font-size: 20px;
+}
+
+.header  ul li a{
+    font-size: 15px;
+}
+
+
+/***************** home *********************/
+
+.home {
+    overflow-y: hidden;
+}
+
+.home .home-content{
+    top: 20%;
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.home .home-content h1 {
+    font-size: 28px;
+    width: 420px;
+}
+
+.home .home-content .home-content-p2 {
+    width: 550px;
+    font-size: 13px ;
+}
+
+.home-content .home-content-icons {
+    width: 50%;
+    font-size: 18px;
+    margin-top:15px;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan;
+}
+
+.home .btn-more-about-me { 
+    width:50%;
+    margin-top: 5px;
+    padding: 20px 0;
+}
+
+.home .btn-more-about-me a{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 10px cyan;
+}
+
+/************** about *******************/
+.about{
+    margin-top: 10%;
+}
+.section-title{
+    font-size: 21px;
+    margin: 100px auto 25px auto;
+}
+
+.about-me-content{
+    display: block;
+}
+
+.about-me-content .about-img{
+    text-align: center;
+    padding: 40px;
+    margin:  0 1% 0 0;
+}
+
+.about-me-content .about-img img{   
+    max-width: 400px;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 35px cyan ;
+}
+
+.about-me-content .about-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 25px;
+    padding: 0 20px ;
+    margin-bottom: 30px;
+}
+
+.about-me-content .about-text .about-me-p2{
+    font-size: 12px;
+    padding: 0 10px ;
+    width: 100%;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more{
+    padding: 20px 0;
+}
+
+.about-me-content .more a:hover{
+    box-shadow: 0 0 10px var(--logo-btn-color);
+}
+
+/******************* service ************************/
+
+.contianer .services-card i{
+    overflow-y: hidden;
+}
+
+.technical-bars .bar .info  i{
+    overflow-y: hidden;
+}
+
+/*************** skills *****************/
+.technical-bars .bar .progress{
+    width: 500px;
+}
+
+/****************** Portfolio *********************/
+
+.portfolio-content{
+    margin-left: 0%;
+}
+
+.portfolio-content .row .leyar p.p1,
+.portfolio-content .row .leyar p.p2,
+.portfolio-content .row .leyar a{
+    overflow-y: hidden; 
+}
+
+/************** contact **********************/
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.content .text-p-about-me{
+    width: 400px;
+}
+
+.content .content-text .icons{
+    margin-bottom:30px ;
+    padding: 15px 0;
+}
+
+.content .content-text .icons a i:hover{
+    box-shadow: 0 0 15px #00ffd1;
+}
+
+.content .content-form .btn-send{
+    overflow-y: hidden;
+}
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffd1;
+    border: none;
+}
+
+}
+
+
+/************************** MD && LG ************************/
+
+@media (min-width: 767.98px) and (max-width: 991.98px){
+    
+    *{
+        overflow-x:hidden ;
+    }
+
+    body i {
+        overflow-y: hidden;
+    }
+
+/*************** header ********************/
+
+.header .nav-content .open_menu{
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+.header .nav-content .navbar{
+    display: block;
+}
+
+.header  ul {
+    position: fixed;
+    top: 8%;
+    right: -100%;
+    display: block;
+    background:var(--background-navbar-footer-color);
+    padding: 15px 30px;
+    width: 250px;
+    border-radius:0 0 0 25px ;
+    transition: all 0.8s ease;
+}
+
+.header .open{
+    right: 0%;
+}
+
+/***************** home *********************/
+
+.home {
+    background: url(none);
+    overflow-y: hidden;
+}
+
+.home .home-content{
+    top: 20%;
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.home .home-content h1 {
+    font-size: 22px;
+    width: 325px;
+}
+
+.home .home-content .home-content-p2 {
+    width: 500px;
+    font-size: 13px ;
+}
+
+.home-content .home-content-icons {
+    width: 50%;
+    font-size: 18px;
+    margin-top:15px;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan;
+}
+
+.home .btn-more-about-me { 
+    width:50%;
+    margin-top: 5px;
+    padding: 20px 0;
+}
+
+.home .btn-more-about-me a{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 10px cyan;
+}
+
+/************** about *******************/
+.about{
+    margin-top: 10%;
+}
+.section-title{
+    font-size: 21px;
+    margin: 100px auto 25px auto;
+}
+
+.about-me-content{
+    display: block;
+}
+
+.about-me-content .about-img{
+    text-align: center;
+    padding: 40px;
+    margin:  0 1% 0 0;
+}
+
+.about-me-content .about-img img{   
+    max-width: 400px;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 35px cyan ;
+}
+
+.about-me-content .about-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 25px;
+    padding: 0 20px ;
+    margin-bottom: 30px;
+}
+
+.about-me-content .about-text .about-me-p2{
+    font-size: 12px;
+    padding: 0 10px ;
+    width: 100%;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more{
+    padding: 20px 0;
+}
+
+.about-me-content .more a:hover{
+    box-shadow: 0 0 10px var(--logo-btn-color);
+}
+
+/******************* service ************************/
+
+.contianer .services-card i{
+    overflow-y: hidden;
+}
+
+.technical-bars .bar .info  i{
+    overflow-y: hidden;
+}
+
+/*************** skills *****************/
+.technical-bars .bar .progress{
+    width: 400px;
+}
+
+/****************** Portfolio *********************/
+
+.portfolio-content{
+    margin-left: 0%;
+}
+
+.portfolio-content .row .leyar p.p1,
+.portfolio-content .row .leyar p.p2,
+.portfolio-content .row .leyar a{
+    overflow-y: hidden; 
+}
+
+/************** contact **********************/
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.content{
+    display: block;
+}
+
+.content .text-p-about-me{
+    width: 425px;
+}
+
+.content .content-text .icons{
+    margin-bottom:30px ;
+    padding: 15px 0;
+}
+
+.content .content-text .icons a i:hover{
+    box-shadow: 0 0 15px #00ffd1;
+}
+
+.content .content-form .btn-send{
+    overflow-y: hidden;
+}
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffd1;
+    border: none;
+}
+
+/***************** footer *******************/
+.footer h6{
+    font-size: 10px;
+}
+
+.footer h6 span{
+    font-size: 15px;
+}
+
+}
+
+
+/************************** SM && MD ************************/
+
+@media (min-width: 575.98px) and (max-width: 767.98px){
+    
+    *{
+        overflow-x:hidden ;
+    }
+
+    body i {
+        overflow-y: hidden;
+    }
+
+/*************** header ********************/
+
+.header .nav-content .open_menu{
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+.header .nav-content .navbar{
+    display: block;
+}
+
+.header  ul {
+    position: fixed;
+    top: 8%;
+    right: -100%;
+    display: block;
+    background:var(--background-navbar-footer-color);
+    padding: 15px 30px;
+    width: 150px;
+    border-radius:0 0 0 25px ;
+    transition: all 0.8s ease;
+}
+
+.header .open{
+    right: 0%;
+}
+
+/***************** home *********************/
+
+.home {
+    background: url(none);
+    overflow-y: hidden;
+}
+
+.home .home-content{
+    top: 20%;
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.home .home-content h1 {
+    font-size: 22px;
+    width: 325px;
+}
+
+.home .home-content .home-content-p2 {
+    width: 450px;
+    font-size: 13px ;
+}
+
+.home-content .home-content-icons {
+    width: 50%;
+    font-size: 18px;
+    margin-top:15px;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan;
+}
+
+.home .btn-more-about-me { 
+    width:50%;
+    margin-top: 5px;
+    padding: 20px 0;
+}
+
+.home .btn-more-about-me a{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 10px cyan;
+}
+
+/************** about *******************/
+.about{
+    margin-top: 10%;
+}
+.section-title{
+    font-size: 21px;
+    margin: 100px auto 25px auto;
+}
+
+.about-me-content{
+    display: block;
+}
+
+.about-me-content .about-img{
+    text-align: center;
+    padding: 40px;
+    margin:  0 1% 0 0;
+}
+
+.about-me-content .about-img img{   
+    max-width: 400px;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 35px cyan ;
+}
+
+.about-me-content .about-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 25px;
+    padding: 0 20px ;
+    margin-bottom: 30px;
+}
+
+.about-me-content .about-text .about-me-p2{
+    font-size: 12px;
+    padding: 0 10px ;
+    width: 100%;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more{
+    padding: 20px 0;
+}
+
+.about-me-content .more a:hover{
+    box-shadow: 0 0 10px var(--logo-btn-color);
+}
+
+/******************* service ************************/
+
+.contianer .services-card i{
+    overflow-y: hidden;
+}
+
+.technical-bars .bar .info  i{
+    overflow-y: hidden;
+}
+
+/*************** skills *****************/
+.technical-bars .bar .progress{
+    width: 400px;
+}
+
+/****************** Portfolio *********************/
+
+.portfolio-content{
+    margin-left: 0%;
+}
+
+.portfolio-content .row .leyar p.p1,
+.portfolio-content .row .leyar p.p2,
+.portfolio-content .row .leyar a{
+    overflow-y: hidden; 
+}
+
+/************** contact **********************/
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.content{
+    display: block;
+}
+
+.content .text-p-about-me{
+    width: 425px;
+}
+
+.content .content-text .icons{
+    margin-bottom:30px ;
+    padding: 15px 0;
+}
+
+.content .content-text .icons a i:hover{
+    box-shadow: 0 0 15px #00ffd1;
+}
+
+.content .content-form .btn-send{
+    overflow-y: hidden;
+}
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffd1;
+    border: none;
+}
+
+/***************** footer *******************/
+.footer h6{
+    font-size: 10px;
+}
+
+.footer h6 span{
+    font-size: 15px;
+}
+
+}
+
+/************************** SM ************************/
+@media (min-width: 400.98px) and (max-width: 575.98px){
+
+    *{
+        overflow-x:hidden ;
+    }
+
+    body i {
+        overflow-y: hidden;
+    }
+
+/*************** header ********************/
+
+.header .nav-content .open_menu{
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+.header .nav-content .navbar{
+    display: block;
+}
+
+.header  ul {
+    position: fixed;
+    top: 7%;
+    right: -100%;
+    display: block;
+    background-color: var(--background-navbar-footer-color);
+    padding: 10px 15px;
+    width: 150px;
+    border-radius:0 0 0 25px ;
+    transition: all 0.8s ease;
+}
+
+.header .open{
+    right: 0%;
+}
+
+/***************** home *********************/
+
+.home {
+    background-color: var(--background-body-color);
+    overflow-y: hidden;
+}
+
+.home .home-content{
+    top: 15%;
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.home .home-content h1 {
+    font-size: 20px;
+    width: 300px;
+}
+
+.home .home-content .home-content-p2 {
+    width: 350px;
+    font-size: 13px ;
+}
+
+.home-content .home-content-icons {
+    width: 50%;
+    font-size: 13px;
+    margin-top:15px;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan;
+}
+
+.home .btn-more-about-me { 
+    width:50%;
+    margin-top: 5px;
+    padding: 20px 0;
+}
+
+.home .btn-more-about-me a{
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 15px cyan;
+}
+
+/************** about *******************/
+.about{
+    margin-top: 3%;
+}
+.section-title{
+    font-size: 21px;
+    margin: 100px auto 25px auto;
+}
+
+.about-me-content{
+    display: block;
+}
+
+.about-me-content .about-img{
+    padding: 40px;
+    margin:  0 1% 0 0;
+}
+
+.about-me-content .about-img img{   
+    max-width: 300px;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 35px cyan ;
+}
+
+.about-me-content .about-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 25px;
+    padding: 0 20px ;
+    margin-bottom: 30px;
+}
+
+.about-me-content .about-text .about-me-p2{
+    font-size: 12px;
+    padding: 0 10px ;
+    width: 100%;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more{
+    padding: 20px 0;
+}
+
+.about-me-content .more a:hover{
+    box-shadow: 0 0 10px var(--logo-btn-color);
+}
+
+/******************* service ************************/
+
+.contianer .services-card i{
+    overflow-y: hidden;
+}
+
+.technical-bars .bar .info  i{
+    overflow-y: hidden;
+}
+
+/*************** skills *****************/
+.technical-bars .bar .progress{
+    width: 300px;
+}
+
+/****************** Portfolio *********************/
+
+.portfolio-content{
+    margin-left: 0%;
+}
+
+.portfolio-content .row .leyar p.p1,
+.portfolio-content .row .leyar p.p2,
+.portfolio-content .row .leyar a{
+    overflow-y: hidden; 
+}
+
+/************** contact **********************/
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.content{
+    display: block;
+}
+
+.content .text-p-about-me{
+    width: 425px;
+}
+
+.content .content-text .icons{
+    margin-bottom:30px ;
+    padding: 15px 0;
+}
+
+.content .content-text .icons a i:hover{
+    box-shadow: 0 0 15px #00ffd1;
+}
+
+.content .content-form .btn-send{
+    overflow-y: hidden;
+}
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffd1;
+    border: none;
+}
+
+/***************** footer *******************/
+.footer h6{
+    font-size: 7px;
+}
+
+.footer h6 span{
+    font-size: 10px;
+}
+
+}
+
+/************************** XSM ************************/
+@media (min-width: 360.98px) and (max-width: 400.98px){
+
+    *{
+        overflow-x:hidden ;
+    }
+
+    body i {
+        overflow-y: hidden;
+    }
+
+/*************** header ********************/
+
+.header .logo {
+    font-size: 20px;
+}
+
+
+.header .nav-content .open_menu{
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+.header .nav-content .navbar{
+    display: block;
+}
+
+.header  ul {
+    position: fixed;
+    top: 7%;
+    right: -100%;
+    display: block;
+    background-color: var(--background-navbar-footer-color);
+    padding: 10px 15px;
+    width: 150px;
+    border-radius:0 0 0 25px ;
+    transition: all 0.8s ease;
+}
+
+.header .open{
+    right: 0%;
+}
+
+/***************** home *********************/
+
+.home {
+    background-color: var(--background-body-color);
+    overflow-y: hidden;
+}
+
+.home .home-content{
+    top: 15%;
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+.home .home-content h1 {
+    font-size: 20px;
+    width: 300px;
+}
+
+.home .home-content .home-content-p2 {
+    width: 250px;
+    font-size: 13px ;
+}
+
+.home-content .home-content-icons {
+    width: 50%;
+    font-size: 13px;
+    margin-top:15px;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan;
+}
+
+.home .btn-more-about-me { 
+    width:50%;
+    margin-top: 5px;
+    padding: 20px 0;
+}
+
+.home .btn-more-about-me a{
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 15px cyan;
+}
+
+/************** about *******************/
+.about{
+    margin-top: 10%;
+}
+.section-title{
+    font-size: 21px;
+    margin: 100px auto 25px auto;
+}
+
+.about-me-content{
+    display: block;
+}
+
+.about-me-content .about-img{
+    padding: 40px;
+    margin:  0 1% 0 0;
+}
+
+.about-me-content .about-img img{   
+    max-width: 300px;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 35px cyan ;
+}
+
+.about-me-content .about-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 25px;
+    padding: 0 20px ;
+    margin-bottom: 30px;
+}
+
+.about-me-content .about-text .about-me-p2{
+    font-size: 12px;
+    padding: 0 10px ;
+    width: 100%;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more{
+    padding: 20px 0;
+}
+
+.about-me-content .more a:hover{
+    box-shadow: 0 0 10px var(--logo-btn-color);
+}
+
+/******************* service ************************/
+
+.contianer .services-card{
+    width: 250px;
+}
+
+.contianer .services-card i{
+    overflow-y: hidden;
+}
+
+.technical-bars .bar .info  i{
+    overflow-y: hidden;
+}
+
+/*************** skills *****************/
+.technical-bars .bar .progress{
+    width: 250px;
+}
+
+/****************** Portfolio *********************/
+
+.portfolio .contianer{
+    margin-left:-2% ;
+}
+
+.portfolio-content{
+    text-align: center;
+    margin: auto -5% ;
+}
+
+.portfolio-content .row .leyar p.p1,
+.portfolio-content .row .leyar p.p2,
+.portfolio-content .row .leyar a{
+    overflow-y: hidden; 
+}
+
+/************** contact **********************/
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.content{
+    display: block;
+}
+
+.content .text-p-about-me{
+    width: 425px;
+}
+
+.content .content-text .icons{
+    margin-bottom:30px ;
+    padding: 15px 0;
+}
+
+.content .content-text .icons a i:hover{
+    box-shadow: 0 0 15px #00ffd1;
+}
+
+.content .content-form .btn-send{
+    overflow-y: hidden;
+}
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffd1;
+    border: none;
+}
+
+/***************** footer *******************/
+.footer h6{
+    font-size: 7px;
+}
+
+.footer h6 span{
+    font-size: 10px;
+}
+
+}
+
+/************************** XSM ************************/
+@media (max-width: 360.98px){
+
+    *{
+        overflow-x:hidden ;
+    }
+
+    body i {
+        overflow-y: hidden;
+    }
+
+/*************** header ********************/
+
+.header .logo {
+    font-size: 20px;
+}
+
+
+.header .nav-content .open_menu{
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+.header .nav-content .navbar{
+    display: block;
+}
+
+.header  ul {
+    position: fixed;
+    top: 7%;
+    right: -100%;
+    display: block;
+    background-color: var(--background-navbar-footer-color);
+    padding: 10px 15px;
+    width: 150px;
+    border-radius:0 0 0 25px ;
+    transition: all 0.8s ease;
+}
+
+.header .open{
+    right: 0%;
+}
+
+/***************** home *********************/
+
+.home {
+    background-color: var(--background-body-color);
+    overflow-y: hidden;
+}
+
+.home .home-content{
+    top: 15%;
+}
+
+.home .home-content .home-content-p1 {
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+.home .home-content h1 {
+    font-size: 20px;
+    width: 300px;
+}
+
+.home .home-content .home-content-p2 {
+    width: 250px;
+    font-size: 13px ;
+}
+
+.home-content .home-content-icons {
+    width: 50%;
+    font-size: 13px;
+    margin-top:15px;
+    margin-left: 10px;
+    padding: 25px 0;
+}
+
+.home .home-content .home-content-icons a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan;
+}
+
+.home .btn-more-about-me { 
+    width:50%;
+    margin-top: 5px;
+    padding: 20px 0;
+}
+
+.home .btn-more-about-me a{
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.home .btn-more-about-me a:hover{
+    box-shadow: 0 0 5px cyan , 0 0 15px cyan;
+}
+/************** about *******************/
+.about{
+    margin-top: 10%;
+}
+.section-title{
+    font-size: 21px;
+    margin: 100px auto 25px auto;
+}
+
+.about-me-content{
+    display: block;
+}
+
+.about-me-content .about-img{
+    padding: 40px;
+    margin:  0 1% 0 0;
+}
+
+.about-me-content .about-img img{   
+    max-width: 300px;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 35px cyan ;
+}
+
+.about-me-content .about-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.about-me-content .about-text .about-me-p1{
+    font-size: 25px;
+    padding: 0 20px ;
+    margin-bottom: 30px;
+}
+
+.about-me-content .about-text .about-me-p2{
+    font-size: 12px;
+    padding: 0 10px ;
+    width: 100%;
+}
+
+.about-me-content .more{
+    margin: 25px auto;
+}
+
+.about-me-content .more{
+    padding: 20px 0;
+}
+
+.about-me-content .more a:hover{
+    box-shadow: 0 0 10px var(--logo-btn-color);
+}
+
+/******************* service ************************/
+
+.contianer .services-card{
+    width: 250px;
+}
+
+.contianer .services-card i{
+    overflow-y: hidden;
+}
+
+.technical-bars .bar .info  i{
+    overflow-y: hidden;
+}
+
+/*************** skills *****************/
+.technical-bars .bar .progress{
+    width: 250px;
+}
+
+/****************** Portfolio *********************/
+
+.portfolio .contianer{
+    margin-left:-7% ;
+}
+
+.portfolio-content{
+    text-align: center;
+    margin: auto -4% ;
+}
+
+.portfolio-content .row .leyar p.p1,
+.portfolio-content .row .leyar p.p2,
+.portfolio-content .row .leyar a{
+    overflow-y: hidden; 
+}
+
+/************** contact **********************/
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.content{
+    display: block;
+}
+
+.content .text-p-about-me{
+    width: 425px;
+}
+
+.content .content-text .icons{
+    margin-bottom:30px ;
+    padding: 15px 0;
+}
+
+.content .content-text .icons a i:hover{
+    box-shadow: 0 0 15px #00ffd1;
+}
+
+.content .content-form .btn-send{
+    overflow-y: hidden;
+}
+
+.content .content-form .btn-send:hover{
+    background-color: #00ffd1;
+    color: #fff;
+    box-shadow: 0 0 10px #00ffd1;
+    border: none;
+}
+
+/***************** footer *******************/
+.footer h6{
+    font-size: 7px;
+}
+
+.footer h6 span{
+    font-size: 10px;
+}
+
+}
